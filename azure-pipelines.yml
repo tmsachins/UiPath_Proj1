@@ -18,6 +18,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+- task: UiPathInstallPlatform@5
+  inputs:
+    cliVersion: 'WIN_24.10.9050.17872'
 
 - task: UiPathPack@5
   inputs:
