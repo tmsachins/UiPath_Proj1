@@ -17,11 +17,15 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: UiPathInstallPlatform@5
+  inputs:
+    cliVersion: 'WIN_25.4.9239.19674'
 
 - task: UiPathPack@5
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
+    orchestratorConnection: 'UiPath Orc'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
 - task: PublishBuildArtifacts@1
