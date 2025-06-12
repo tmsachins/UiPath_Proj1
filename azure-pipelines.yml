@@ -22,6 +22,8 @@ steps:
   inputs:
     cliVersion: 'WIN_24.10.9050.17872'
 
+
+
 - task: UiPathPack@5
   inputs:
     versionType: 'AutoVersion'
