@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  Default
+  vmImage: 'windows-latest'
 
 steps:
 - script: echo Hello, world!
@@ -30,7 +30,7 @@ steps:
     projectJsonPath: '$(Build.SourcesDirectory)'
     orchestratorConnection: 'UiPath Orc'
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
-    toolInstallerVersion: 'WIN_24.10.9050.17872'
+
 
 - task: PublishBuildArtifacts@1
   inputs:
